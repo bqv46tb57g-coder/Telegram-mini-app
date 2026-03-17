@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>CALI NORD MENU</title>
 
 <style>
@@ -10,40 +14,48 @@ body{
 background:#000;
 color:white;
 font-family:Arial;
-text-align:center;
 margin:0;
 }
 
 .header{
 background:#0b1a3a;
+text-align:center;
 padding:15px;
 font-weight:bold;
+font-size:18px;
 }
 
 .products{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:20px;
-padding:20px;
+gap:15px;
+padding:15px;
 }
 
 .product{
 background:#111;
+border-radius:12px;
 padding:10px;
-border-radius:10px;
+text-align:center;
 }
 
 .product img{
 width:90px;
 height:90px;
 object-fit:cover;
-border-radius:8px;
+border-radius:10px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.product img:hover{
+transform:scale(1.05);
 }
 
 .price{
 font-size:12px;
-margin-top:8px;
 line-height:18px;
+margin-top:8px;
 }
 
 .button{
@@ -58,7 +70,26 @@ text-decoration:none;
 font-size:12px;
 }
 
+.zoom{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.zoom img{
+width:80%;
+max-width:400px;
+border-radius:12px;
+}
+
 </style>
+
 </head>
 
 <body>
@@ -70,7 +101,7 @@ CALI NORD MENU
 <div class="products">
 
 <div class="product">
-<img src="IMG_0273.png">
+<img src="IMG_0273.png" onclick="zoom(this.src)">
 <div class="price">
 1G — 10€<br>
 5G — 40€<br>
@@ -84,7 +115,7 @@ CALI NORD MENU
 </div>
 
 <div class="product">
-<img src="IMG_0274.png">
+<img src="IMG_0274.png" onclick="zoom(this.src)">
 <div class="price">
 1G — 10€<br>
 5G — 40€<br>
@@ -98,7 +129,7 @@ CALI NORD MENU
 </div>
 
 <div class="product">
-<img src="IMG_0477.png">
+<img src="IMG_0477.png" onclick="zoom(this.src)">
 <div class="price">
 1G — 10€<br>
 5G — 40€<br>
@@ -112,7 +143,7 @@ CALI NORD MENU
 </div>
 
 <div class="product">
-<img src="IMG_0478.png">
+<img src="IMG_0478.png" onclick="zoom(this.src)">
 <div class="price">
 1G — 10€<br>
 5G — 40€<br>
@@ -126,7 +157,7 @@ CALI NORD MENU
 </div>
 
 <div class="product">
-<img src="IMG_0471.jpeg">
+<img src="IMG_0471.jpeg" onclick="zoom(this.src)">
 <div class="price">
 1G — 10€<br>
 5G — 40€<br>
@@ -140,6 +171,23 @@ CALI NORD MENU
 </div>
 
 </div>
+
+<div class="zoom" id="zoom" onclick="closeZoom()">
+<img id="zoom-img">
+</div>
+
+<script>
+
+function zoom(src){
+document.getElementById("zoom").style.display="flex"
+document.getElementById("zoom-img").src=src
+}
+
+function closeZoom(){
+document.getElementById("zoom").style.display="none"
+}
+
+</script>
 
 </body>
 </html>
