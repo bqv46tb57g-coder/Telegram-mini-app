@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <title>Menu</title>
@@ -7,12 +8,13 @@
 <style>
 
 body{
-background:#0f172a;
-font-family:Arial;
-color:white;
 margin:0;
-padding:0;
+font-family:Arial;
+background:#0f172a;
+color:white;
 }
+
+/* HEADER /
 
 header{
 text-align:center;
@@ -22,56 +24,120 @@ font-weight:bold;
 background:#020617;
 }
 
+/ MENU CATEGORIES /
+
+.menu{
+display:flex;
+justify-content:center;
+gap:10px;
+padding:15px;
+background:#020617;
+position:sticky;
+top:0;
+}
+
+.menu a{
+background:#1e293b;
+padding:10px 15px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+/ CATEGORIES /
+
 .category{
-padding:20px;
+padding:30px 20px;
+border-bottom:2px solid #1e293b;
 }
 
 .category h2{
-margin-bottom:20px;
-border-left:4px solid #22c55e;
+border-left:5px solid #22c55e;
 padding-left:10px;
 }
 
+/ PRODUITS /
+
 .products{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
+gap:25px;
 }
+
+/ CARTE PRODUIT /
 
 .product{
 background:#020617;
-border-radius:12px;
+border-radius:14px;
 overflow:hidden;
-box-shadow:0 0 10px rgba(0,0,0,0.5);
+box-shadow:0 10px 20px rgba(0,0,0,0.6);
 }
+
+/ IMAGE /
 
 .product img{
 width:100%;
-height:150px;
+height:250px;
 object-fit:cover;
+cursor:pointer;
 }
 
+/ PRIX /
+
 .price{
-padding:10px;
-font-size:14px;
-line-height:1.6;
+padding:15px;
+line-height:1.7;
 }
+
+/ BOUTON /
 
 .buy{
 display:block;
 text-align:center;
 background:#22c55e;
-color:white;
-padding:10px;
-text-decoration:none;
+padding:12px;
 font-weight:bold;
+color:white;
+text-decoration:none;
 }
 
-.buy:hover{
-background:#16a34a;
+/ IMAGE PLEIN ECRAN */
+
+.viewer{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.viewer img{
+max-width:90%;
+max-height:90%;
 }
 
 </style>
+
+<script>
+
+function openImage(src){
+let viewer=document.getElementById("viewer")
+let img=document.getElementById("viewer-img")
+
+img.src=src
+viewer.style.display="flex"
+}
+
+function closeImage(){
+document.getElementById("viewer").style.display="none"
+}
+
+</script>
+
 </head>
 
 <body>
@@ -80,15 +146,21 @@ background:#16a34a;
 MENU
 </header>
 
+<div class="menu">
+<a href="#fleurs">Fleurs</a>
+<a href="#dure">Dure</a>
+<a href="#resine">Résine</a>
+</div>
+
 <!-- FLEURS -->
 
-<div class="category">
+<div class="category" id="fleurs">
 <h2>🌸 Fleurs</h2>
 
 <div class="products">
 
 <div class="product">
-<img src="IMG_0273.png">
+<img src="IMG_0273.png" onclick="openImage(this.src)">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
@@ -102,7 +174,7 @@ MENU
 </div>
 
 <div class="product">
-<img src="IMG_0274.png">
+<img src="IMG_0274.png" onclick="openImage(this.src)">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
@@ -116,7 +188,7 @@ MENU
 </div>
 
 <div class="product">
-<img src="IMG_0471.jpeg">
+<img src="IMG_0471.jpeg" onclick="openImage(this.src)">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
@@ -134,13 +206,13 @@ MENU
 
 <!-- DURE -->
 
-<div class="category">
+<div class="category" id="dure">
 <h2>🧊 Dure</h2>
 
 <div class="products">
 
 <div class="product">
-<img src="IMG_0477.png">
+<img src="IMG_0477.png" onclick="openImage(this.src)">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
@@ -158,13 +230,13 @@ MENU
 
 <!-- RESINE -->
 
-<div class="category">
+<div class="category" id="resine">
 <h2>🍫 Résine</h2>
 
 <div class="products">
 
 <div class="product">
-<img src="IMG_0478.png">
+<img src="IMG_0478.png" onclick="openImage(this.src)">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
@@ -178,6 +250,10 @@ MENU
 </div>
 
 </div>
+</div>
+
+<div class="viewer" id="viewer" onclick="closeImage()">
+<img id="viewer-img">
 </div>
 
 </body>
