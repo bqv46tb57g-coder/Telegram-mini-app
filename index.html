@@ -9,7 +9,7 @@
 body{
 margin:0;
 font-family:Arial;
-background:linear-gradient(180deg,#0f172a,#020617);
+background:#0f172a;
 color:white;
 }
 
@@ -20,64 +20,82 @@ font-size:26px;
 font-weight:bold;
 }
 
+.categories{
+display:flex;
+justify-content:center;
+gap:10px;
+padding:10px;
+}
+
+.categories button{
+background:#1e293b;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
 .products{
 display:grid;
-grid-template-columns:1fr;
-gap:25px;
+grid-template-columns:1fr 1fr;
+gap:15px;
 padding:20px;
-max-width:500px;
+max-width:600px;
 margin:auto;
 }
 
 .product{
 background:#1e293b;
-border-radius:18px;
+border-radius:15px;
 overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
-transition:0.3s;
-}
-
-.product:hover{
-transform:translateY(-5px);
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 
 .product img{
 width:100%;
-display:block;
 }
 
 .price{
-padding:18px;
+padding:10px;
 text-align:center;
-line-height:1.8;
-font-size:16px;
+font-size:14px;
+line-height:1.6;
 }
 
 .buy{
 display:block;
-margin:15px;
-padding:12px;
+margin:10px;
+padding:10px;
 text-align:center;
 background:#facc15;
-border-radius:10px;
+border-radius:8px;
 font-weight:bold;
 text-decoration:none;
 color:black;
-transition:0.2s;
-}
-
-.buy:hover{
-background:#eab308;
-}
-
-.footer{
-text-align:center;
-font-size:12px;
-opacity:0.6;
-padding:20px;
 }
 
 </style>
+
+<script>
+
+function showCategory(category){
+
+let products=document.querySelectorAll(".product")
+
+products.forEach(p=>{
+p.style.display="none"
+})
+
+document.querySelectorAll("." + category).forEach(p=>{
+p.style.display="block"
+})
+
+}
+
+</script>
+
 </head>
 
 <body>
@@ -86,54 +104,54 @@ padding:20px;
 Catalogue
 </div>
 
+<div class="categories">
+
+<button onclick="showCategory('fleurs')">Fleurs</button>
+<button onclick="showCategory('resines')">Résines</button>
+<button onclick="showCategory('vapes')">Vapes</button>
+
+</div>
+
 <div class="products">
 
-<div class="product">
+<div class="product fleurs">
 <img src="IMG_0477.png">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
-10G 80€<br>
-25G 150€<br>
-50G 280€<br>
-100G 520€<br>
-1K 4500€
+10G 80€
 </div>
-<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander sur Snapchat</a>
+<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
-<div class="product">
+<div class="product fleurs">
 <img src="IMG_0478.png">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
-10G 80€<br>
-25G 150€<br>
-50G 280€<br>
-100G 520€<br>
-1K 4500€
+10G 80€
 </div>
-<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander sur Snapchat</a>
+<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
-<div class="product">
+<div class="product resines">
 <img src="IMG_0471.jpeg">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
-10G 80€<br>
-25G 150€<br>
-50G 280€<br>
-100G 520€<br>
-1K 4500€
+10G 80€
 </div>
-<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander sur Snapchat</a>
+<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
+<div class="product vapes">
+<img src="IMG_0477.png">
+<div class="price">
+1 pièce 30€
+</div>
+<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
-<div class="footer">
-Contact uniquement via Snapchat
 </div>
 
 </body>
