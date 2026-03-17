@@ -3,27 +3,32 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalogue</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial, sans-serif;
 background:#0f172a;
 color:white;
-text-align:center;
 }
 
+/* HEADER /
+
 header{
-padding:25px;
-font-size:28px;
+text-align:center;
+padding:20px;
+font-size:26px;
 font-weight:bold;
 background:#020617;
 }
 
-.products{
-max-width:450px;
+/ CONTAINER /
+
+.container{
+max-width:420px;
 margin:auto;
 padding:20px;
 display:flex;
@@ -31,89 +36,48 @@ flex-direction:column;
 gap:25px;
 }
 
-/* CARTE PRODUIT /
+/ PRODUIT /
 
 .product{
 background:#020617;
-border-radius:15px;
+border-radius:12px;
 overflow:hidden;
-box-shadow:0 8px 20px rgba(0,0,0,0.6);
+box-shadow:0 6px 20px rgba(0,0,0,0.6);
 }
-
-/ IMAGE /
 
 .product img{
 width:100%;
 height:200px;
 object-fit:cover;
-cursor:pointer;
 }
 
 / PRIX /
 
-.prices{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
+.price{
 padding:15px;
 font-size:18px;
 font-weight:bold;
+line-height:1.8;
+text-align:center;
+background:#020617;
 }
 
-.prices div{
-background:#1e293b;
-padding:10px;
-border-radius:8px;
-}
+/ BOUTON */
 
-/ BOUTON SNAP /
-
-.buy{
+.button{
 display:block;
+text-align:center;
 margin:15px;
-padding:16px;
+padding:14px;
 background:#fffc00;
-border-radius:12px;
+color:black;
 font-weight:bold;
 font-size:18px;
-color:black;
+border-radius:10px;
 text-decoration:none;
-box-shadow:0 0 10px rgba(255,255,0,0.6);
-}
-
-/ IMAGE PLEIN ECRAN */
-
-.viewer{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-display:none;
-justify-content:center;
-align-items:center;
-}
-
-.viewer img{
-max-width:90%;
-max-height:90%;
 }
 
 </style>
-
-<script>
-
-function openImage(src){
-document.getElementById("viewer-img").src=src
-document.getElementById("viewer").style.display="flex"
-}
-
-function closeImage(){
-document.getElementById("viewer").style.display="none"
-}
-
-</script>
 
 </head>
 
@@ -123,54 +87,56 @@ document.getElementById("viewer").style.display="none"
 MENU
 </header>
 
-<div class="products">
+<div class="container">
 
 <div class="product">
-<img src="IMG_0477.png" onclick="openImage(this.src)">
-<div class="prices">
-<div>1G — 10€</div>
-<div>5G — 40€</div>
-<div>10G — 80€</div>
-<div>25G — 150€</div>
-<div>50G — 280€</div>
-<div>100G — 520€</div>
-<div>1K — 4500€</div>
+<img src="IMG_0477.png">
+<div class="price">
+1G — 10€<br>
+5G — 40€<br>
+10G — 80€<br>
+25G — 150€<br>
+50G — 280€<br>
+100G — 520€<br>
+1K — 4500€
 </div>
-<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander sur Snapchat</a>
-</div>
-
-<div class="product">
-<img src="IMG_0478.png" onclick="openImage(this.src)">
-<div class="prices">
-<div>1G — 10€</div>
-<div>5G — 40€</div>
-<div>10G — 80€</div>
-<div>25G — 150€</div>
-<div>50G — 280€</div>
-<div>100G — 520€</div>
-<div>1K — 4500€</div>
-</div>
-<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander sur Snapchat</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">
+Commander sur Snapchat
+</a>
 </div>
 
 <div class="product">
-<img src="IMG_0471.jpeg" onclick="openImage(this.src)">
-<div class="prices">
-<div>1G — 10€</div>
-<div>5G — 40€</div>
-<div>10G — 80€</div>
-<div>25G — 150€</div>
-<div>50G — 280€</div>
-<div>100G — 520€</div>
-<div>1K — 4500€</div>
+<img src="IMG_0478.png">
+<div class="price">
+1G — 10€<br>
+5G — 40€<br>
+10G — 80€<br>
+25G — 150€<br>
+50G — 280€<br>
+100G — 520€<br>
+1K — 4500€
 </div>
-<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander sur Snapchat</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">
+Commander sur Snapchat
+</a>
 </div>
 
+<div class="product">
+<img src="IMG_0471.jpeg">
+<div class="price">
+1G — 10€<br>
+5G — 40€<br>
+10G — 80€<br>
+25G — 150€<br>
+50G — 280€<br>
+100G — 520€<br>
+1K — 4500€
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">
+Commander sur Snapchat
+</a>
 </div>
 
-<div class="viewer" id="viewer" onclick="closeImage()">
-<img id="viewer-img">
 </div>
 
 </body>
