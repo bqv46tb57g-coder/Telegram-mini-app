@@ -1,157 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Catalogue</title>
+<title>Menu</title>
 
 <style>
 
 body{
-margin:0;
-font-family:Arial;
 background:#0f172a;
+font-family:Arial;
 color:white;
+margin:0;
+padding:0;
 }
 
-.header{
+header{
 text-align:center;
 padding:25px;
-font-size:26px;
+font-size:28px;
 font-weight:bold;
+background:#020617;
 }
 
-.categories{
-display:flex;
-justify-content:center;
-gap:10px;
-padding:10px;
+.category{
+padding:20px;
 }
 
-.categories button{
-background:#1e293b;
-border:none;
-padding:10px 15px;
-border-radius:8px;
-color:white;
-font-weight:bold;
-cursor:pointer;
+.category h2{
+margin-bottom:20px;
+border-left:4px solid #22c55e;
+padding-left:10px;
 }
 
 .products{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:15px;
-padding:20px;
-max-width:600px;
-margin:auto;
+gap:20px;
 }
 
 .product{
-background:#1e293b;
-border-radius:15px;
+background:#020617;
+border-radius:12px;
 overflow:hidden;
-box-shadow:0 5px 20px rgba(0,0,0,0.5);
+box-shadow:0 0 10px rgba(0,0,0,0.5);
 }
 
 .product img{
 width:100%;
+height:150px;
+object-fit:cover;
 }
 
 .price{
 padding:10px;
-text-align:center;
 font-size:14px;
 line-height:1.6;
 }
 
 .buy{
 display:block;
-margin:10px;
-padding:10px;
 text-align:center;
-background:#facc15;
-border-radius:8px;
-font-weight:bold;
+background:#22c55e;
+color:white;
+padding:10px;
 text-decoration:none;
-color:black;
+font-weight:bold;
+}
+
+.buy:hover{
+background:#16a34a;
 }
 
 </style>
-
-<script>
-
-function showCategory(category){
-
-let products=document.querySelectorAll(".product")
-
-products.forEach(p=>{
-p.style.display="none"
-})
-
-document.querySelectorAll("." + category).forEach(p=>{
-p.style.display="block"
-})
-
-}
-
-</script>
-
 </head>
 
 <body>
 
-<div class="header">
-Catalogue
-</div>
+<header>
+MENU
+</header>
 
-<div class="categories">
+<!-- FLEURS -->
 
-<button onclick="showCategory('fleurs')">Fleurs</button>
-<button onclick="showCategory('resines')">Résines</button>
-<button onclick="showCategory('vapes')">Vapes</button>
-
-</div>
+<div class="category">
+<h2>🌸 Fleurs</h2>
 
 <div class="products">
 
-<div class="product fleurs">
-<img src="IMG_0477.png">
+<div class="product">
+<img src="IMG_0273.png">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
-10G 80€
+10G 80€<br>
+25G 150€<br>
+50G 280€<br>
+100G 520€<br>
+1K 4500€
 </div>
 <a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
-<div class="product fleurs">
-<img src="IMG_0478.png">
+<div class="product">
+<img src="IMG_0274.png">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
-10G 80€
+10G 80€<br>
+25G 150€<br>
+50G 280€<br>
+100G 520€<br>
+1K 4500€
 </div>
 <a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
-<div class="product resines">
+<div class="product">
 <img src="IMG_0471.jpeg">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
-10G 80€
+10G 80€<br>
+25G 150€<br>
+50G 280€<br>
+100G 520€<br>
+1K 4500€
 </div>
 <a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
-<div class="product vapes">
+</div>
+</div>
+
+<!-- DURE -->
+
+<div class="category">
+<h2>🧊 Dure</h2>
+
+<div class="products">
+
+<div class="product">
 <img src="IMG_0477.png">
 <div class="price">
-1 pièce 30€
+1G 10€<br>
+5G 40€<br>
+10G 80€<br>
+25G 150€<br>
+50G 280€<br>
+100G 520€<br>
+1K 4500€
 </div>
 <a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
+</div>
+</div>
+
+<!-- RESINE -->
+
+<div class="category">
+<h2>🍫 Résine</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="IMG_0478.png">
+<div class="price">
+1G 10€<br>
+5G 40€<br>
+10G 80€<br>
+25G 150€<br>
+50G 280€<br>
+100G 520€<br>
+1K 4500€
+</div>
+<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
+</div>
+
+</div>
 </div>
 
 </body>
