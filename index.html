@@ -12,131 +12,60 @@ margin:0;
 font-family:Arial;
 background:#0f172a;
 color:white;
+text-align:center;
 }
 
-/* HEADER /
-
 header{
-text-align:center;
 padding:25px;
 font-size:28px;
 font-weight:bold;
 background:#020617;
 }
 
-/ MENU CATEGORIES /
-
-.menu{
-display:flex;
-justify-content:center;
-gap:10px;
-padding:15px;
-background:#020617;
-position:sticky;
-top:0;
-}
-
-.menu a{
-background:#1e293b;
-padding:10px 15px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-}
-
-/ CATEGORIES /
-
-.category{
-padding:30px 20px;
-border-bottom:2px solid #1e293b;
-}
-
-.category h2{
-border-left:5px solid #22c55e;
-padding-left:10px;
-}
-
-/ PRODUITS /
-
 .products{
-display:grid;
-gap:25px;
+max-width:500px;
+margin:auto;
+padding:20px;
+display:flex;
+flex-direction:column;
+gap:30px;
 }
-
-/ CARTE PRODUIT /
 
 .product{
 background:#020617;
-border-radius:14px;
+border-radius:15px;
 overflow:hidden;
-box-shadow:0 10px 20px rgba(0,0,0,0.6);
+box-shadow:0 10px 25px rgba(0,0,0,0.6);
 }
-
-/ IMAGE /
 
 .product img{
 width:100%;
-height:250px;
+height:260px;
 object-fit:cover;
-cursor:pointer;
 }
-
-/ PRIX /
 
 .price{
 padding:15px;
-line-height:1.7;
+line-height:1.8;
+font-size:16px;
 }
-
-/ BOUTON /
 
 .buy{
 display:block;
-text-align:center;
-background:#22c55e;
+margin:15px;
 padding:12px;
+background:#facc15;
+border-radius:10px;
 font-weight:bold;
-color:white;
+color:black;
 text-decoration:none;
 }
 
-/ IMAGE PLEIN ECRAN */
-
-.viewer{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
-display:none;
-justify-content:center;
-align-items:center;
-}
-
-.viewer img{
-max-width:90%;
-max-height:90%;
+.buy:hover{
+background:#eab308;
 }
 
 </style>
-
-<script>
-
-function openImage(src){
-let viewer=document.getElementById("viewer")
-let img=document.getElementById("viewer-img")
-
-img.src=src
-viewer.style.display="flex"
-}
-
-function closeImage(){
-document.getElementById("viewer").style.display="none"
-}
-
-</script>
 
 </head>
 
@@ -146,21 +75,10 @@ document.getElementById("viewer").style.display="none"
 MENU
 </header>
 
-<div class="menu">
-<a href="#fleurs">Fleurs</a>
-<a href="#dure">Dure</a>
-<a href="#resine">Résine</a>
-</div>
-
-<!-- FLEURS -->
-
-<div class="category" id="fleurs">
-<h2>🌸 Fleurs</h2>
-
 <div class="products">
 
 <div class="product">
-<img src="IMG_0273.png" onclick="openImage(this.src)">
+<img src="IMG_0477.png">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
@@ -170,11 +88,11 @@ MENU
 100G 520€<br>
 1K 4500€
 </div>
-<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
+<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander sur Snapchat</a>
 </div>
 
 <div class="product">
-<img src="IMG_0274.png" onclick="openImage(this.src)">
+<img src="IMG_0478.png">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
@@ -184,11 +102,11 @@ MENU
 100G 520€<br>
 1K 4500€
 </div>
-<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
+<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander sur Snapchat</a>
 </div>
 
 <div class="product">
-<img src="IMG_0471.jpeg" onclick="openImage(this.src)">
+<img src="IMG_0471.jpeg">
 <div class="price">
 1G 10€<br>
 5G 40€<br>
@@ -198,62 +116,9 @@ MENU
 100G 520€<br>
 1K 4500€
 </div>
-<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
+<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander sur Snapchat</a>
 </div>
 
-</div>
-</div>
-
-<!-- DURE -->
-
-<div class="category" id="dure">
-<h2>🧊 Dure</h2>
-
-<div class="products">
-
-<div class="product">
-<img src="IMG_0477.png" onclick="openImage(this.src)">
-<div class="price">
-1G 10€<br>
-5G 40€<br>
-10G 80€<br>
-25G 150€<br>
-50G 280€<br>
-100G 520€<br>
-1K 4500€
-</div>
-<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
-</div>
-
-</div>
-</div>
-
-<!-- RESINE -->
-
-<div class="category" id="resine">
-<h2>🍫 Résine</h2>
-
-<div class="products">
-
-<div class="product">
-<img src="IMG_0478.png" onclick="openImage(this.src)">
-<div class="price">
-1G 10€<br>
-5G 40€<br>
-10G 80€<br>
-25G 150€<br>
-50G 280€<br>
-100G 520€<br>
-1K 4500€
-</div>
-<a class="buy" href="https://snapchat.com/add/nord_cali62">Commander</a>
-</div>
-
-</div>
-</div>
-
-<div class="viewer" id="viewer" onclick="closeImage()">
-<img id="viewer-img">
 </div>
 
 </body>
