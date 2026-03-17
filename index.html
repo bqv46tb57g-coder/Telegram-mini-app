@@ -31,6 +31,8 @@ flex-direction:column;
 gap:30px;
 }
 
+/* CARTE PRODUIT /
+
 .product{
 background:#020617;
 border-radius:15px;
@@ -38,17 +40,32 @@ overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,0.6);
 }
 
+/ IMAGE /
+
 .product img{
 width:100%;
 height:260px;
 object-fit:cover;
+cursor:pointer;
 }
 
-.price{
+/ PRIX /
+
+.prices{
+display:grid;
+grid-template-columns:1fr 1fr;
 padding:15px;
-line-height:1.8;
-font-size:16px;
+gap:10px;
+font-size:15px;
 }
+
+.prices div{
+background:#1e293b;
+padding:8px;
+border-radius:6px;
+}
+
+/ BOUTON /
 
 .buy{
 display:block;
@@ -61,11 +78,39 @@ color:black;
 text-decoration:none;
 }
 
-.buy:hover{
-background:#eab308;
+/ IMAGE PLEIN ECRAN */
+
+.viewer{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.viewer img{
+max-width:90%;
+max-height:90%;
 }
 
 </style>
+
+<script>
+
+function openImage(src){
+document.getElementById("viewer-img").src=src
+document.getElementById("viewer").style.display="flex"
+}
+
+function closeImage(){
+document.getElementById("viewer").style.display="none"
+}
+
+</script>
 
 </head>
 
@@ -78,47 +123,51 @@ MENU
 <div class="products">
 
 <div class="product">
-<img src="IMG_0477.png">
-<div class="price">
-1G 10€<br>
-5G 40€<br>
-10G 80€<br>
-25G 150€<br>
-50G 280€<br>
-100G 520€<br>
-1K 4500€
+<img src="IMG_0477.png" onclick="openImage(this.src)">
+<div class="prices">
+<div>1G — 10€</div>
+<div>5G — 40€</div>
+<div>10G — 80€</div>
+<div>25G — 150€</div>
+<div>50G — 280€</div>
+<div>100G — 520€</div>
+<div>1K — 4500€</div>
 </div>
 <a class="buy" href="https://snapchat.com/add/nord_cali62">Commander sur Snapchat</a>
 </div>
 
 <div class="product">
-<img src="IMG_0478.png">
-<div class="price">
-1G 10€<br>
-5G 40€<br>
-10G 80€<br>
-25G 150€<br>
-50G 280€<br>
-100G 520€<br>
-1K 4500€
+<img src="IMG_0478.png" onclick="openImage(this.src)">
+<div class="prices">
+<div>1G — 10€</div>
+<div>5G — 40€</div>
+<div>10G — 80€</div>
+<div>25G — 150€</div>
+<div>50G — 280€</div>
+<div>100G — 520€</div>
+<div>1K — 4500€</div>
 </div>
 <a class="buy" href="https://snapchat.com/add/nord_cali62">Commander sur Snapchat</a>
 </div>
 
 <div class="product">
-<img src="IMG_0471.jpeg">
-<div class="price">
-1G 10€<br>
-5G 40€<br>
-10G 80€<br>
-25G 150€<br>
-50G 280€<br>
-100G 520€<br>
-1K 4500€
+<img src="IMG_0471.jpeg" onclick="openImage(this.src)">
+<div class="prices">
+<div>1G — 10€</div>
+<div>5G — 40€</div>
+<div>10G — 80€</div>
+<div>25G — 150€</div>
+<div>50G — 280€</div>
+<div>100G — 520€</div>
+<div>1K — 4500€</div>
 </div>
 <a class="buy" href="https://snapchat.com/add/nord_cali62">Commander sur Snapchat</a>
 </div>
 
+</div>
+
+<div class="viewer" id="viewer" onclick="closeImage()">
+<img id="viewer-img">
 </div>
 
 </body>
