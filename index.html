@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Catalogue</title>
+<title>Menu</title>
 
 <style>
 
@@ -23,59 +23,57 @@ font-weight:bold;
 background:#020617;
 }
 
+/* GRILLE PRODUITS /
+
 .container{
-max-width:420px;
+max-width:500px;
 margin:auto;
-padding:20px;
-display:flex;
-flex-direction:column;
-gap:25px;
+padding:15px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
 }
+
+/ CARTE PRODUIT /
 
 .product{
 background:#020617;
-border-radius:12px;
+border-radius:14px;
 padding:10px;
 box-shadow:0 6px 20px rgba(0,0,0,0.6);
+text-align:center;
 }
 
-/* IMAGE REDUITE A 50% /
+/ IMAGE STYLE TELEGRAM /
 
 .product img{
-width:50%;
+width:100%;
 aspect-ratio:1/1;
-object-fit:contain;
-background:black;
+object-fit:cover;
 border-radius:10px;
-border:2px solid #1e293b;
-box-shadow:0 4px 12px rgba(0,0,0,0.6);
-display:block;
-margin:auto;
 }
 
 / PRIX /
 
 .price{
-padding:15px;
-font-size:18px;
+margin-top:10px;
+font-size:14px;
 font-weight:bold;
-line-height:1.8;
-text-align:center;
+line-height:1.6;
 }
 
 / BOUTON SNAP */
 
 .button{
 display:block;
-text-align:center;
-margin:15px;
-padding:14px;
+margin-top:10px;
+padding:10px;
 background:#fffc00;
 color:black;
 font-weight:bold;
-font-size:18px;
-border-radius:10px;
+border-radius:8px;
 text-decoration:none;
+font-size:14px;
 }
 
 </style>
@@ -84,9 +82,7 @@ text-decoration:none;
 
 <body>
 
-<header>
-MENU
-</header>
+<header>MENU</header>
 
 <div class="container">
 
@@ -102,7 +98,7 @@ MENU
 1K — 4500€
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">
-Commander sur Snapchat
+Commander
 </a>
 </div>
 
@@ -118,7 +114,7 @@ Commander sur Snapchat
 1K — 4500€
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">
-Commander sur Snapchat
+Commander
 </a>
 </div>
 
@@ -134,7 +130,7 @@ Commander sur Snapchat
 1K — 4500€
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">
-Commander sur Snapchat
+Commander
 </a>
 </div>
 
