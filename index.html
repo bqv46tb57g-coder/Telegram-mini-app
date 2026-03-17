@@ -1,4 +1,9 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
@@ -11,7 +16,7 @@ color:white;
 
 .header{
 text-align:center;
-padding:18px;
+padding:20px;
 font-size:22px;
 font-weight:bold;
 }
@@ -27,8 +32,8 @@ text-align:center;
 .products{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:12px;
-padding:12px;
+gap:15px;
+padding:15px;
 }
 
 .card{
@@ -41,65 +46,62 @@ text-align:center;
 .card img{
 width:100%;
 border-radius:10px;
-cursor:pointer;
 }
 
-.name{
-margin-top:8px;
-font-size:15px;
+.card h3{
+margin:10px 0 5px 0;
+font-size:16px;
 }
 
 .price{
 color:#22c55e;
-margin-top:4px;
+font-weight:bold;
 }
 
-.viewer{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:black;
-display:none;
-align-items:center;
-justify-content:center;
-}
-
-.viewer img{
-max-width:90%;
-max-height:90%;
+.footer{
+text-align:center;
+padding:20px;
+opacity:0.8;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <div class="header">
-Catalogue
+CALI NORD
 </div>
 
-<div class="notice" id="snap">
-</eee
-<h2>Catalogue</h2>
-
-<div>
-<img src="IMG_0273.png" width="100%">
-<p>Produit 1</p>
+<div class="notice">
+Catalogue produits
 </div>
 
-<div>
-<img src="IMG_0274.png" width="100%">
-<p>Produit 2</p>
+<div class="products">
+
+<div class="card">
+<img src="IMG_0273.png">
+<h3>Produit 1</h3>
+<div class="price">à partir de 10€</div>
 </div>
 
-<div>
-<img src="IMG_0471.jpeg" width="100%">
-<p>Produit 3</p>
+<div class="card">
+<img src="IMG_0274.png">
+<h3>Produit 2</h3>
+<div class="price">à partir de 15€</div>
 </div>
 
-<p style="text-align:center;margin-top:30px;">
+<div class="card">
+<img src="IMG_0471.jpeg">
+<h3>Produit 3</h3>
+<div class="price">à partir de 20€</div>
+</div>
+
+</div>
+
+<div class="footer">
 Commande uniquement via Snapchat
-</p>
+</div>
+
+</body>
+</html>
