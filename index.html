@@ -4,8 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- EMPÊCHE TELEGRAM DE ZOOMER -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>CALI NORD MENU</title>
 
@@ -13,8 +12,8 @@
 
 body{
 margin:0;
-background:#0f172a;
 font-family:Arial;
+background:#0f172a;
 color:white;
 }
 
@@ -22,61 +21,62 @@ color:white;
 
 header{
 text-align:center;
-padding:14px;
-font-size:18px;
+padding:15px;
+font-size:20px;
 font-weight:bold;
 background:#020617;
 }
 
-/ CONTENEUR LIMITÉ /
+/ CONTENEUR /
 
 .container{
-max-width:380px;
+max-width:360px;
 margin:auto;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-padding:10px;
+padding:15px;
+display:flex;
+flex-direction:column;
+gap:20px;
 }
 
-/ CARTE PRODUIT /
+/ PRODUIT /
 
 .product{
 background:#020617;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,0.5);
+border-radius:12px;
+padding:12px;
+text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,0.6);
 }
 
-/ IMAGE PETITE /
+/ IMAGE /
 
 .product img{
-width:100%;
-height:120px;
+width:200px;
+height:200px;
 object-fit:cover;
+border-radius:10px;
+display:block;
+margin:auto;
 }
 
 / PRIX /
 
 .price{
-font-size:11px;
-padding:8px;
-line-height:1.4;
-text-align:center;
+margin-top:10px;
+font-size:14px;
 font-weight:bold;
+line-height:1.6;
 }
 
 / BOUTON */
 
 .button{
 display:block;
-margin:8px;
-padding:8px;
+margin-top:10px;
+padding:12px;
 background:#fffc00;
 color:black;
-text-align:center;
-border-radius:6px;
-font-size:11px;
+border-radius:10px;
 font-weight:bold;
 text-decoration:none;
 }
@@ -92,7 +92,9 @@ text-decoration:none;
 <div class="container">
 
 <div class="product">
+
 <img src="IMG_0477.png">
+
 <div class="price">
 1G 10€<br>
 5G 40€<br>
@@ -102,13 +104,17 @@ text-decoration:none;
 100G 520€<br>
 1K 4500€
 </div>
+
 <a class="button" href="https://snapchat.com/add/nord_cali62">
-Commander
+Commander sur Snapchat
 </a>
+
 </div>
 
 <div class="product">
+
 <img src="IMG_0478.png">
+
 <div class="price">
 1G 10€<br>
 5G 40€<br>
@@ -118,13 +124,17 @@ Commander
 100G 520€<br>
 1K 4500€
 </div>
+
 <a class="button" href="https://snapchat.com/add/nord_cali62">
-Commander
+Commander sur Snapchat
 </a>
+
 </div>
 
 <div class="product">
+
 <img src="IMG_0471.jpeg">
+
 <div class="price">
 1G 10€<br>
 5G 40€<br>
@@ -134,9 +144,11 @@ Commander
 100G 520€<br>
 1K 4500€
 </div>
+
 <a class="button" href="https://snapchat.com/add/nord_cali62">
-Commander
+Commander sur Snapchat
 </a>
+
 </div>
 
 </div>
