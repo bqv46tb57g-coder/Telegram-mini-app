@@ -2,9 +2,8 @@
 <html>
 
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CALI NORD MENU</title>
 
@@ -25,7 +24,7 @@ font-weight:bold;
 font-size:18px;
 }
 
-.products{
+.container{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:15px;
@@ -37,28 +36,35 @@ background:#111;
 border-radius:12px;
 padding:15px;
 text-align:center;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.product img{
+width:100px;
+border-radius:10px;
+margin-bottom:10px;
 }
 
 .title{
+font-size:18px;
 font-weight:bold;
 margin-bottom:10px;
 }
 
 .price{
-font-size:12px;
-line-height:18px;
+font-size:14px;
+line-height:22px;
+margin-bottom:15px;
 }
 
 .button{
 display:inline-block;
-margin-top:10px;
-padding:6px 12px;
-background:#ffd400;
+background:#e0c34c;
 color:black;
-font-weight:bold;
-border-radius:6px;
+padding:8px 15px;
+border-radius:8px;
 text-decoration:none;
-font-size:12px;
+font-weight:bold;
 }
 
 </style>
@@ -71,10 +77,14 @@ font-size:12px;
 CALI NORD MENU
 </div>
 
-<div class="products">
+<div class="container">
 
 <div class="product">
+
 <div class="title">Produit 1</div>
+
+<img src="IMG_0471.jpeg">
+
 <div class="price">
 1G — 10€<br>
 5G — 40€<br>
@@ -84,11 +94,18 @@ CALI NORD MENU
 100G — 520€<br>
 1K — 4500€
 </div>
+
 <a class="button" href="https://snapchat.com">Commander</a>
+
 </div>
 
+
 <div class="product">
+
 <div class="title">Produit 2</div>
+
+<img src="IMG_0477.png">
+
 <div class="price">
 1G — 10€<br>
 5G — 40€<br>
@@ -98,11 +115,18 @@ CALI NORD MENU
 100G — 520€<br>
 1K — 4500€
 </div>
+
 <a class="button" href="https://snapchat.com">Commander</a>
+
 </div>
+
 
 <div class="product">
+
 <div class="title">Produit 3</div>
+
+<img src="IMG_0478.png">
+
 <div class="price">
 1G — 10€<br>
 5G — 40€<br>
@@ -112,9 +136,10 @@ CALI NORD MENU
 100G — 520€<br>
 1K — 4500€
 </div>
-<a class="button" href="https://snapchat.com">Commander</a>
-</div>
 
+<a class="button" href="https://snapchat.com">Commander</a>
+
+</div>
 
 </div>
 
