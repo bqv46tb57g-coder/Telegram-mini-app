@@ -10,26 +10,45 @@
 <style>
 
 body{
-background:#000;
+background:#0a0a0a;
 color:white;
 font-family:Arial;
 margin:0;
 }
 
+/* HEADER */
+
 .header{
-background:#0b1a3a;
+background:linear-gradient(90deg,#0b1a3a,#2b0b3a);
 text-align:center;
 padding:20px;
 font-weight:bold;
 font-size:20px;
 letter-spacing:2px;
+box-shadow:0 0 20px rgba(0,0,0,0.8);
 }
+
+/* ANIMATION TEXTE */
 
 .logo{
 font-size:14px;
-color:#e0c34c;
-margin-top:5px;
+color:#b66dff;
+margin-top:6px;
+animation:glow 2s infinite alternate;
 }
+
+@keyframes glow{
+from{
+opacity:0.6;
+text-shadow:0 0 5px #b66dff;
+}
+to{
+opacity:1;
+text-shadow:0 0 15px #b66dff,0 0 25px #7d2cff;
+}
+}
+
+/* PRODUITS */
 
 .container{
 display:grid;
@@ -39,16 +58,18 @@ padding:15px;
 }
 
 .product{
-background:#111;
+background:#121212;
 border-radius:12px;
 padding:15px;
 text-align:center;
 box-shadow:0 0 12px rgba(0,0,0,0.7);
 transition:0.2s;
+border:1px solid rgba(180,120,255,0.2);
 }
 
 .product:hover{
-transform:scale(1.03);
+transform:scale(1.04);
+box-shadow:0 0 20px rgba(160,80,255,0.6);
 }
 
 .product img{
@@ -61,22 +82,25 @@ margin-bottom:10px;
 font-size:18px;
 font-weight:bold;
 margin-bottom:10px;
-color:#e0c34c;
+color:#c48bff;
 }
 
 .price{
 font-size:14px;
 line-height:24px;
 margin-bottom:15px;
-background:#000;
+background:#0a0a0a;
 padding:8px;
 border-radius:8px;
+border:1px solid rgba(180,120,255,0.3);
 }
+
+/* BOUTON */
 
 .button{
 display:inline-block;
-background:#e0c34c;
-color:black;
+background:linear-gradient(90deg,#c48bff,#7d2cff);
+color:white;
 padding:10px 16px;
 border-radius:8px;
 text-decoration:none;
@@ -85,8 +109,8 @@ transition:0.2s;
 }
 
 .button:hover{
-transform:scale(1.08);
-background:#ffd84d;
+transform:scale(1.1);
+box-shadow:0 0 15px #7d2cff;
 }
 
 .button:active{
@@ -101,7 +125,7 @@ transform:scale(0.95);
 
 <div class="header">
 CALI NORD MENU
-<div class="logo">Express livraison 59/62</div>
+<div class="logo">Express livraison 59/62 🚚</div>
 </div>
 
 <div class="container">
