@@ -78,6 +78,7 @@ box-shadow:0 0 20px rgba(160,80,255,0.6);
 width:100px;
 border-radius:10px;
 margin-bottom:10px;
+cursor:pointer;
 }
 
 .title{
@@ -137,7 +138,7 @@ CALI NORD MENU
 
 <div class="product">
 <div class="title">C 1 🍁</div>
-<img src="IMG_0471.jpeg">
+<img src="IMG_0471.jpeg" onclick="openModal(this.src)">
 <div class="price">
 1G — 10€<br>
 5G — 40€<br>
@@ -149,11 +150,10 @@ CALI NORD MENU
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
-
 
 <div class="product">
 <div class="title">C 2 🍁</div>
-<img src="IMG_0477.png">
+<img src="IMG_0477.png" onclick="openModal(this.src)">
 <div class="price">
 1G — 10€<br>
 5G — 40€<br>
@@ -165,11 +165,10 @@ CALI NORD MENU
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
-
 
 <div class="product">
 <div class="title">C 3 🍁</div>
-<img src="IMG_0478.png">
+<img src="IMG_0478.png" onclick="openModal(this.src)">
 <div class="price">
 1G — 10€<br>
 5G — 40€<br>
@@ -182,10 +181,9 @@ CALI NORD MENU
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
-
 <div class="product">
 <div class="title">Z ❄️</div>
-<img src="IMG_0472.jpeg">
+<img src="IMG_0472.jpeg" onclick="openModal(this.src)">
 <div class="price">
 0,5G — 30€<br>
 1G — 50€<br>
@@ -195,7 +193,6 @@ Top prix en PV
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
-
 
 <div class="product">
 <div class="title">K 🦄</div>
@@ -207,7 +204,6 @@ Top prix en PV
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
-
 
 <div class="product">
 <div class="title">P 🍬</div>
@@ -221,6 +217,42 @@ Top prix en PV
 </div>
 
 </div>
+
+<!-- MODAL IMAGE -->
+<div id="imgModal" onclick="closeModal()" style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+z-index:999;
+justify-content:center;
+align-items:center;
+">
+
+<img id="modalImg" style="
+max-width:90%;
+max-height:90%;
+border-radius:12px;
+">
+
+</div>
+
+<script>
+function openModal(src){
+  const modal = document.getElementById("imgModal");
+  const img = document.getElementById("modalImg");
+
+  modal.style.display = "flex";
+  img.src = src;
+}
+
+function closeModal(){
+  document.getElementById("imgModal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
