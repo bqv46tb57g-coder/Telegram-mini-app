@@ -88,14 +88,35 @@ margin-bottom:10px;
 color:#c48bff;
 }
 
+/* NOUVEAU STYLE PRIX */
 .price{
-font-size:14px;
-line-height:24px;
-margin-bottom:15px;
 background:#0a0a0a;
-padding:8px;
-border-radius:8px;
-border:1px solid rgba(180,120,255,0.3);
+padding:10px;
+border-radius:10px;
+border:1px solid rgba(180,120,255,0.25);
+font-size:14px;
+margin-bottom:15px;
+}
+
+.price div{
+display:flex;
+justify-content:space-between;
+padding:4px 0;
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.price div:last-child{
+border-bottom:none;
+}
+
+.price span{
+color:#c48bff;
+font-weight:bold;
+}
+
+.price div:hover{
+background:rgba(180,120,255,0.08);
+border-radius:6px;
 }
 
 .button{
@@ -125,116 +146,115 @@ transform:scale(0.95);
 <body>
 
 <div class="header">
-
 <div class="cnlogo">CN</div>
-
 CALI NORD MENU
-
 <div class="logo">Express livraison 59/62 🚚</div>
-
 </div>
 
 <div class="container">
 
+<!-- C1 -->
 <div class="product">
 <div class="title">C 1 🍁</div>
 <img src="IMG_0471.jpeg" onclick="openModal(this.src)">
 <div class="price">
-1G — 10€<br>
-5G — 40€<br>
-10G — 80€<br>
-25G — 150€<br>
-50G — 280€<br>
-100G — 520€<br>
-1K — 4500€
+<div><p>1G</p><span>10€</span></div>
+<div><p>5G</p><span>40€</span></div>
+<div><p>10G</p><span>80€</span></div>
+<div><p>25G</p><span>150€</span></div>
+<div><p>50G</p><span>280€</span></div>
+<div><p>100G</p><span>520€</span></div>
+<div><p>1K</p><span>4500€</span></div>
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
+<!-- C2 -->
 <div class="product">
 <div class="title">C 2 🍁</div>
 <img src="IMG_0477.png" onclick="openModal(this.src)">
 <div class="price">
-1G — 10€<br>
-5G — 40€<br>
-10G — 80€<br>
-25G — 150€<br>
-50G — 280€<br>
-100G — 520€<br>
-1K — 4500€
+<div><p>1G</p><span>10€</span></div>
+<div><p>5G</p><span>40€</span></div>
+<div><p>10G</p><span>80€</span></div>
+<div><p>25G</p><span>150€</span></div>
+<div><p>50G</p><span>280€</span></div>
+<div><p>100G</p><span>520€</span></div>
+<div><p>1K</p><span>4500€</span></div>
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
+<!-- C3 -->
 <div class="product">
 <div class="title">C 3 🍁</div>
 <img src="IMG_0478.png" onclick="openModal(this.src)">
 <div class="price">
-1G — 10€<br>
-5G — 40€<br>
-10G — 80€<br>
-25G — 150€<br>
-50G — 280€<br>
-100G — 520€<br>
-1K — 4500€
+<div><p>1G</p><span>10€</span></div>
+<div><p>5G</p><span>40€</span></div>
+<div><p>10G</p><span>80€</span></div>
+<div><p>25G</p><span>150€</span></div>
+<div><p>50G</p><span>280€</span></div>
+<div><p>100G</p><span>520€</span></div>
+<div><p>1K</p><span>4500€</span></div>
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
+<!-- Z -->
 <div class="product">
 <div class="title">Z ❄️</div>
 <img src="IMG_0472.jpeg" onclick="openModal(this.src)">
 <div class="price">
-0,5G — 30€<br>
-1G — 50€<br>
-5G — 180€<br>
-10G — 300€<br>
-Top prix en PV
+<div><p>0,5G</p><span>30€</span></div>
+<div><p>1G</p><span>50€</span></div>
+<div><p>5G</p><span>180€</span></div>
+<div><p>10G</p><span>300€</span></div>
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
+<!-- K -->
 <div class="product">
 <div class="title">K 🦄</div>
 <div class="price">
-1G — 10€<br>
-5G — 40€<br>
-10G — 70€<br>
-Top prix en PV
+<div><p>1G</p><span>10€</span></div>
+<div><p>5G</p><span>40€</span></div>
+<div><p>10G</p><span>70€</span></div>
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
+<!-- P -->
 <div class="product">
 <div class="title">P 🍬</div>
 <div class="price">
-1P — 5€<br>
-5P — 20€<br>
-10P — 35€<br>
-Top prix en PV
+<div><p>1P</p><span>5€</span></div>
+<div><p>5P</p><span>20€</span></div>
+<div><p>10P</p><span>35€</span></div>
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
-<!-- NOUVEAU PRODUIT -->
+<!-- MOUSSEUX -->
 <div class="product">
 <div class="title">💎 Mousseux Premium</div>
 <img src="ton-image.jpg" onclick="openModal(this.src)">
 <div class="price">
-2,5G — 10€<br>
-5G — 20€<br>
-10G — 40€<br>
-25G — 80€<br>
-50G — 130€<br>
-100G — 240€<br>
-1K — 1850€
+<div><p>2,5G</p><span>10€</span></div>
+<div><p>5G</p><span>20€</span></div>
+<div><p>10G</p><span>40€</span></div>
+<div><p>25G</p><span>80€</span></div>
+<div><p>50G</p><span>130€</span></div>
+<div><p>100G</p><span>240€</span></div>
+<div><p>1K</p><span>1850€</span></div>
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 </div>
 
-<!-- MODAL IMAGE -->
+<!-- MODAL -->
 <div id="imgModal" onclick="closeModal()" style="
 display:none;
 position:fixed;
@@ -247,26 +267,16 @@ z-index:999;
 justify-content:center;
 align-items:center;
 ">
-
-<img id="modalImg" style="
-max-width:90%;
-max-height:90%;
-border-radius:12px;
-">
-
+<img id="modalImg" style="max-width:90%;max-height:90%;border-radius:12px;">
 </div>
 
 <script>
 function openModal(src){
-  const modal = document.getElementById("imgModal");
-  const img = document.getElementById("modalImg");
-
-  modal.style.display = "flex";
-  img.src = src;
+document.getElementById("imgModal").style.display="flex";
+document.getElementById("modalImg").src=src;
 }
-
 function closeModal(){
-  document.getElementById("imgModal").style.display = "none";
+document.getElementById("imgModal").style.display="none";
 }
 </script>
 
