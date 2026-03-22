@@ -39,7 +39,6 @@ font-size:16px;
 box-shadow:0 0 10px #fffc00;
 }
 
-/* LOGO PRINCIPAL */
 .main-logo{
 width:240px;
 max-width:90%;
@@ -51,15 +50,10 @@ animation:glowLogo 2s infinite alternate;
 }
 
 @keyframes glowLogo{
-from{
-filter:drop-shadow(0 0 5px #7d2cff);
-}
-to{
-filter:drop-shadow(0 0 20px #c48bff);
-}
+from{filter:drop-shadow(0 0 5px #7d2cff);}
+to{filter:drop-shadow(0 0 20px #c48bff);}
 }
 
-/* TEXTE LIVRAISON ÉPAIS */
 .logo{
 font-size:18px;
 font-weight:900;
@@ -116,34 +110,30 @@ margin-bottom:10px;
 color:#c48bff;
 }
 
+/* 🔥 GRILLE TARIF COMPACTE */
 .price{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:6px;
 background:#0a0a0a;
 padding:10px;
 border-radius:10px;
 border:1px solid rgba(180,120,255,0.25);
-font-size:14px;
+font-size:13px;
 margin-bottom:15px;
 }
 
 .price div{
 display:flex;
 justify-content:space-between;
-padding:4px 0;
-border-bottom:1px solid rgba(255,255,255,0.05);
-}
-
-.price div:last-child{
-border-bottom:none;
+padding:5px 6px;
+background:rgba(255,255,255,0.03);
+border-radius:6px;
 }
 
 .price span{
 color:#c48bff;
 font-weight:bold;
-}
-
-.price div:hover{
-background:rgba(180,120,255,0.08);
-border-radius:6px;
 }
 
 .button{
