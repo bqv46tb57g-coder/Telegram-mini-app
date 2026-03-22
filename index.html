@@ -39,24 +39,10 @@ font-size:16px;
 box-shadow:0 0 10px #fffc00;
 }
 
-/* LOGO PRINCIPAL */
-.main-logo{
-width:240px;
-max-width:90%;
-margin-top:10px;
-display:block;
-margin-left:auto;
-margin-right:auto;
-animation:glowLogo 2s infinite alternate;
-}
-
-@keyframes glowLogo{
-from{
-filter:drop-shadow(0 0 5px #7d2cff);
-}
-to{
-filter:drop-shadow(0 0 20px #c48bff);
-}
+.menu-title{
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
 }
 
 .logo{
@@ -176,9 +162,7 @@ transform:scale(0.95);
 </a>
 </div>
 
-<!-- LOGO AJOUTÉ ICI -->
-<img src="D992F7FD-279D-452C-8.jpeg" class="main-logo">
-
+<div class="menu-title">CALI NORD MENU</div>
 <div class="logo">Express livraison 59/62 🚚</div>
 </div>
 
@@ -200,4 +184,131 @@ transform:scale(0.95);
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
-<!-- (tout le reste inchangé) -->
+<!-- C2 -->
+<div class="product">
+<div class="title">C 2 🍁</div>
+<img src="IMG_0671.jpeg" onclick="openModal(this.src)">
+<div class="price">
+<div><p>1G</p><span>10€</span></div>
+<div><p>5G</p><span>40€</span></div>
+<div><p>10G</p><span>80€</span></div>
+<div><p>25G</p><span>150€</span></div>
+<div><p>50G</p><span>280€</span></div>
+<div><p>100G</p><span>520€</span></div>
+<div><p>1K</p><span>4500€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
+</div>
+
+<!-- C3 -->
+<div class="product">
+<div class="title">C 3 🍁</div>
+<img src="IMG_0478.png" onclick="openModal(this.src)">
+<div class="price">
+<div><p>1G</p><span>10€</span></div>
+<div><p>5G</p><span>40€</span></div>
+<div><p>10G</p><span>80€</span></div>
+<div><p>25G</p><span>150€</span></div>
+<div><p>50G</p><span>280€</span></div>
+<div><p>100G</p><span>520€</span></div>
+<div><p>1K</p><span>4500€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
+</div>
+
+<!-- C4 -->
+<div class="product">
+<div class="title">C 4 🍁</div>
+<img src="IMG_0673.jpeg" onclick="openModal(this.src)">
+<div class="price">
+<div><p>1G</p><span>10€</span></div>
+<div><p>5G</p><span>40€</span></div>
+<div><p>10G</p><span>80€</span></div>
+<div><p>25G</p><span>150€</span></div>
+<div><p>50G</p><span>280€</span></div>
+<div><p>100G</p><span>520€</span></div>
+<div><p>1K</p><span>4500€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
+</div>
+
+<!-- MOUSSEUX -->
+<div class="product">
+<div class="title">💎 Mousseux Premium</div>
+<img src="IMG_0670.jpeg" onclick="openModal(this.src)">
+<div class="price">
+<div><p>2,5G</p><span>10€</span></div>
+<div><p>5G</p><span>20€</span></div>
+<div><p>10G</p><span>40€</span></div>
+<div><p>25G</p><span>80€</span></div>
+<div><p>50G</p><span>130€</span></div>
+<div><p>100G</p><span>240€</span></div>
+<div><p>1K</p><span>1850€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
+</div>
+
+<!-- Z -->
+<div class="product">
+<div class="title">Z ❄️</div>
+<img src="IMG_0675.jpeg" onclick="openModal(this.src)">
+<div class="price">
+<div><p>0,5G</p><span>30€</span></div>
+<div><p>1G</p><span>50€</span></div>
+<div><p>5G</p><span>180€</span></div>
+<div><p>10G</p><span>300€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
+</div>
+
+<!-- K -->
+<div class="product">
+<div class="title">K 🦄</div>
+<div class="price">
+<div><p>1G</p><span>10€</span></div>
+<div><p>5G</p><span>40€</span></div>
+<div><p>10G</p><span>70€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
+</div>
+
+<!-- P -->
+<div class="product">
+<div class="title">P 🍬</div>
+<div class="price">
+<div><p>1P</p><span>5€</span></div>
+<div><p>5P</p><span>20€</span></div>
+<div><p>10P</p><span>35€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
+</div>
+
+</div>
+
+<div id="imgModal" onclick="closeModal()" style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+z-index:999;
+justify-content:center;
+align-items:center;
+">
+<img id="modalImg" style="max-width:90%;max-height:90%;border-radius:12px;">
+</div>
+
+<script>
+function openModal(src){
+document.getElementById("imgModal").style.display="flex";
+document.getElementById("modalImg").src=src;
+}
+function closeModal(){
+document.getElementById("imgModal").style.display="none";
+}
+</script>
+
+</body>
+</html>
