@@ -39,10 +39,24 @@ font-size:16px;
 box-shadow:0 0 10px #fffc00;
 }
 
-.menu-title{
-font-size:20px;
-font-weight:bold;
-letter-spacing:2px;
+/* LOGO PRINCIPAL */
+.main-logo{
+width:240px;
+max-width:90%;
+margin-top:10px;
+display:block;
+margin-left:auto;
+margin-right:auto;
+animation:glowLogo 2s infinite alternate;
+}
+
+@keyframes glowLogo{
+from{
+filter:drop-shadow(0 0 5px #7d2cff);
+}
+to{
+filter:drop-shadow(0 0 20px #c48bff);
+}
 }
 
 .logo{
@@ -162,7 +176,8 @@ transform:scale(0.95);
 </a>
 </div>
 
-<div class="menu-title">CALI NORD MENU</div>
+<img src="D992F7FD-279D-452C-8C7A-E35A53BEEFE0.png" class="main-logo">
+
 <div class="logo">Express livraison 59/62 🚚</div>
 </div>
 
