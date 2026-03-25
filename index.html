@@ -16,12 +16,32 @@ font-family:Arial;
 margin:0;
 }
 
+/* HEADER */
 .header{
 background:linear-gradient(90deg,#0b1a3a,#2b0b3a);
 text-align:center;
 padding:20px;
 }
 
+.snaplogo{
+color:#000;
+background:#fffc00;
+padding:8px 16px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+margin-bottom:10px;
+}
+
+.main-logo{
+width:220px;
+display:block;
+margin:auto;
+margin-top:10px;
+}
+
+/* MENU */
 .menu{
 display:flex;
 justify-content:center;
@@ -44,6 +64,7 @@ font-weight:bold;
 background:#7d2cff;
 }
 
+/* CONTAINER */
 .container{
 display:none;
 grid-template-columns:1fr 1fr;
@@ -55,6 +76,7 @@ padding:15px;
 display:grid;
 }
 
+/* PRODUCT */
 .product{
 background:#121212;
 border-radius:12px;
@@ -66,7 +88,6 @@ text-align:center;
 width:100px;
 border-radius:10px;
 margin-bottom:10px;
-cursor:pointer;
 transition:0.3s;
 }
 
@@ -76,12 +97,12 @@ box-shadow:0 0 20px #7d2cff;
 }
 
 .title{
-font-size:18px;
+color:#c48bff;
 font-weight:bold;
 margin-bottom:10px;
-color:#c48bff;
 }
 
+/* PRICE */
 .price{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -90,22 +111,23 @@ background:#0a0a0a;
 padding:10px;
 border-radius:10px;
 font-size:13px;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .price div{
 display:flex;
 justify-content:space-between;
-padding:5px;
 }
 
+/* BUTTON */
 .button{
-background:#7d2cff;
+background:linear-gradient(90deg,#c48bff,#7d2cff);
+color:white;
 padding:10px;
 border-radius:8px;
 text-decoration:none;
-color:white;
 display:inline-block;
+font-weight:bold;
 }
 
 </style>
@@ -115,7 +137,13 @@ display:inline-block;
 <body>
 
 <div class="header">
-<h2>🚚 CALI NORD MENU</h2>
+
+<a class="snaplogo" href="https://snapchat.com/add/nord_cali62">
+👻 SNAP : nord_cali62
+</a>
+
+<img src="IMG_0683.jpeg" class="main-logo">
+
 </div>
 
 <!-- MENU -->
@@ -129,28 +157,23 @@ display:inline-block;
 <div id="fleurs" class="container active">
 
 <div class="product">
-<div class="title">C1</div>
+<div class="title">C1 🍁</div>
 <img src="IMG_0672.jpeg">
+<div class="price">
+<div><p>1G</p><span>10€</span></div>
+<div><p>5G</p><span>40€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 <div class="product">
-<div class="title">C2</div>
-<img src="IMG_0671.jpeg">
-</div>
-
-<div class="product">
-<div class="title">C3</div>
-<img src="IMG_0669.jpeg">
-</div>
-
-<div class="product">
-<div class="title">C4</div>
-<img src="IMG_0673.jpeg">
-</div>
-
-<div class="product">
-<div class="title">C5</div>
+<div class="title">C5 🍁</div>
 <img src="IMG_0478.png">
+<div class="price">
+<div><p>1G</p><span>10€</span></div>
+<div><p>5G</p><span>40€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 </div>
@@ -159,13 +182,23 @@ display:inline-block;
 <div id="hash" class="container">
 
 <div class="product">
-<div class="title">DRY SIFT</div>
+<div class="title">DRY SIFT u45</div>
 <img src="IMG_0686.jpeg">
+<div class="price">
+<div><p>1G</p><span>10€</span></div>
+<div><p>5G</p><span>35€</span></div>
+<div><p>1K</p><span>3200€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 <div class="product">
-<div class="title">MOUSSEUX</div>
+<div class="title">Mousseux</div>
 <img src="IMG_0670.jpeg">
+<div class="price">
+<div><p>10G</p><span>40€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 </div>
@@ -174,15 +207,19 @@ display:inline-block;
 <div id="dure" class="container">
 
 <div class="product">
-<div class="title">Z</div>
+<div class="title">Z ❄️</div>
+<div class="price">
+<div><p>1G</p><span>50€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 <div class="product">
-<div class="title">K</div>
+<div class="title">K 🦄</div>
+<div class="price">
+<div><p>1G</p><span>10€</span></div>
 </div>
-
-<div class="product">
-<div class="title">P</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 </div>
