@@ -21,6 +21,7 @@ margin:0;
 background:linear-gradient(90deg,#0b1a3a,#2b0b3a);
 text-align:center;
 padding:20px;
+overflow:hidden;
 }
 
 .snaplogo{
@@ -34,11 +35,15 @@ display:inline-block;
 margin-bottom:10px;
 }
 
+/* 🔥 LOGO FIX */
 .main-logo{
-width:240px;
+width:100%;
+max-width:320px;
+height:auto;
 display:block;
 margin:auto;
 margin-top:10px;
+object-fit:contain;
 }
 
 /* MENU */
@@ -272,7 +277,6 @@ border-radius:12px;
 <!-- HASH -->
 <div id="hash" class="container">
 
-<!-- DRY -->
 <div class="product">
 <div class="title">DRY SIFT u45</div>
 <img src="IMG_0686.jpeg" onclick="openModal(this.src)">
@@ -290,7 +294,6 @@ border-radius:12px;
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
-<!-- MOUSSEUX -->
 <div class="product">
 <div class="title">💎 Mousseux Premium</div>
 <img src="IMG_0670.jpeg" onclick="openModal(this.src)">
