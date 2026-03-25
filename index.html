@@ -46,6 +46,28 @@ margin-top:10px;
 object-fit:contain;
 }
 
+/* 👇 AJOUT TEXTE */
+.category-hint{
+text-align:center;
+margin-top:10px;
+margin-bottom:5px;
+font-size:14px;
+color:#c48bff;
+font-weight:bold;
+}
+
+.arrow{
+display:block;
+font-size:22px;
+animation:bounce 1.2s infinite;
+margin-top:5px;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(6px);}
+}
+
 /* MENU */
 .menu{
 display:flex;
@@ -180,6 +202,12 @@ border-radius:12px;
 
 <img src="IMG_0683.jpeg" class="main-logo">
 
+</div>
+
+<!-- 👇 TEXTE AJOUTÉ -->
+<div class="category-hint">
+Clique sur la catégorie de ton choix
+<span class="arrow">👇</span>
 </div>
 
 <!-- MENU -->
