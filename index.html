@@ -35,7 +35,7 @@ display:inline-block;
 margin-bottom:10px;
 }
 
-/* 🔥 LOGO FIX */
+/* LOGO */
 .main-logo{
 width:100%;
 max-width:320px;
@@ -46,26 +46,24 @@ margin-top:10px;
 object-fit:contain;
 }
 
-/* 👇 AJOUT TEXTE */
+/* TEXTE AU-DESSUS MENU */
 .category-hint{
 text-align:center;
-margin-top:10px;
-margin-bottom:5px;
-font-size:14px;
+font-size:16px;
 color:#c48bff;
+margin-top:10px;
 font-weight:bold;
 }
 
 .arrow{
-display:block;
+text-align:center;
 font-size:22px;
-animation:bounce 1.2s infinite;
-margin-top:5px;
+animation:bounce 1.5s infinite;
 }
 
 @keyframes bounce{
 0%,100%{transform:translateY(0);}
-50%{transform:translateY(6px);}
+50%{transform:translateY(8px);}
 }
 
 /* MENU */
@@ -204,139 +202,17 @@ border-radius:12px;
 
 </div>
 
-<!-- 👇 TEXTE AJOUTÉ -->
 <div class="category-hint">
-Clique sur la catégorie de ton choix
-<span class="arrow">👇</span>
+👇 Clique sur la catégorie de ton choix 👇
 </div>
+
+<div class="arrow">⬇️⬇️⬇️</div>
 
 <!-- MENU -->
 <div class="menu">
 <button onclick="showPage('fleurs')">🌿 FLEURS NL x US</button>
 <button onclick="showPage('hash')">🍫 HASH RÉSINE</button>
 <button onclick="showPage('dure')">💎 DURE</button>
-</div>
-
-<!-- FLEURS -->
-<div id="fleurs" class="container active">
-
-<!-- C1 -->
-<div class="product">
-<div class="title">C 1 🍁</div>
-<img src="IMG_0672.jpeg" onclick="openModal(this.src)">
-<div class="price">
-<div><p>1G</p><span>10€</span></div>
-<div><p>5G</p><span>40€</span></div>
-<div><p>10G</p><span>80€</span></div>
-<div><p>25G</p><span>150€</span></div>
-<div><p>50G</p><span>280€</span></div>
-<div><p>100G</p><span>520€</span></div>
-<div><p>1K</p><span>4500€</span></div>
-</div>
-<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
-</div>
-
-<!-- C2 -->
-<div class="product">
-<div class="title">SHOP NL</div>
-<img src="IMG_0671.jpeg" onclick="openModal(this.src)">
-<div class="price">
-<div><p>1G</p><span>10€</span></div>
-<div><p>5G</p><span>40€</span></div>
-<div><p>10G</p><span>80€</span></div>
-<div><p>25G</p><span>150€</span></div>
-<div><p>50G</p><span>280€</span></div>
-<div><p>100G</p><span>520€</span></div>
-<div><p>1K</p><span>4500€</span></div>
-</div>
-<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
-</div>
-
-<!-- C3 -->
-<div class="product">
-<div class="title">C 3 🍁</div>
-<img src="IMG_0669.jpeg" onclick="openModal(this.src)">
-<div class="price">
-<div><p>1G</p><span>10€</span></div>
-<div><p>5G</p><span>40€</span></div>
-<div><p>10G</p><span>80€</span></div>
-<div><p>25G</p><span>150€</span></div>
-<div><p>50G</p><span>280€</span></div>
-<div><p>100G</p><span>520€</span></div>
-<div><p>1K</p><span>4500€</span></div>
-</div>
-<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
-</div>
-
-<!-- C4 -->
-<div class="product">
-<div class="title">C 4 🍁</div>
-<img src="IMG_0673.jpeg" onclick="openModal(this.src)">
-<div class="price">
-<div><p>1G</p><span>10€</span></div>
-<div><p>5G</p><span>40€</span></div>
-<div><p>10G</p><span>80€</span></div>
-<div><p>25G</p><span>150€</span></div>
-<div><p>50G</p><span>280€</span></div>
-<div><p>100G</p><span>520€</span></div>
-<div><p>1K</p><span>4500€</span></div>
-</div>
-<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
-</div>
-
-<!-- C5 -->
-<div class="product">
-<div class="title">C 5 🍁</div>
-<img src="IMG_0478.png" onclick="openModal(this.src)">
-<div class="price">
-<div><p>1G</p><span>10€</span></div>
-<div><p>5G</p><span>40€</span></div>
-<div><p>10G</p><span>80€</span></div>
-<div><p>25G</p><span>150€</span></div>
-<div><p>50G</p><span>280€</span></div>
-<div><p>100G</p><span>520€</span></div>
-<div><p>1K</p><span>4500€</span></div>
-</div>
-<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
-</div>
-
-</div>
-
-<!-- HASH -->
-<div id="hash" class="container">
-
-<div class="product">
-<div class="title">DRY SIFT u45</div>
-<img src="IMG_0686.jpeg" onclick="openModal(this.src)">
-<div class="price">
-<div><p>Melted Strawberries</p></div>
-<div><p>Biscotti Sherb Honey</p></div>
-<div><p>1G</p><span>10€</span></div>
-<div><p>5G</p><span>35€</span></div>
-<div><p>10G</p><span>70€</span></div>
-<div><p>25G</p><span>120€</span></div>
-<div><p>50G</p><span>220€</span></div>
-<div><p>100G</p><span>400€</span></div>
-<div><p>1K</p><span>3200€</span></div>
-</div>
-<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
-</div>
-
-<div class="product">
-<div class="title">💎 Mousseux Premium</div>
-<img src="IMG_0670.jpeg" onclick="openModal(this.src)">
-<div class="price">
-<div><p>2,5G</p><span>10€</span></div>
-<div><p>5G</p><span>20€</span></div>
-<div><p>10G</p><span>40€</span></div>
-<div><p>25G</p><span>80€</span></div>
-<div><p>50G</p><span>130€</span></div>
-<div><p>100G</p><span>240€</span></div>
-<div><p>1K</p><span>1850€</span></div>
-</div>
-<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
-</div>
-
 </div>
 
 <!-- DURE -->
@@ -356,6 +232,10 @@ Clique sur la catégorie de ton choix
 
 <div class="product">
 <div class="title">K 🦄</div>
+
+<!-- ✅ IMAGE AJOUTÉE ICI -->
+<img src="IMG_0688.jpeg" onclick="openModal(this.src)">
+
 <div class="price">
 <div><p>1G</p><span>10€</span></div>
 <div><p>5G</p><span>40€</span></div>
@@ -374,11 +254,6 @@ Clique sur la catégorie de ton choix
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
-</div>
-
-<!-- MODAL -->
-<div id="imgModal" onclick="closeModal()">
-<img id="modalImg">
 </div>
 
 <script>
