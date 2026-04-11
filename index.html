@@ -10,14 +10,27 @@
 <style>
 
 body{
-background:#0a0a0a;
+background:url("background.jpg") no-repeat center center fixed;
+background-size:cover;
 color:white;
 font-family:Arial;
 margin:0;
 }
 
+/* OVERLAY */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+z-index:-1;
+}
+
 .header{
-background:linear-gradient(90deg,#0b1a3a,#2b0b3a);
+background:transparent;
 text-align:center;
 padding:20px;
 overflow:hidden;
@@ -96,7 +109,8 @@ flex-wrap:wrap;
 }
 
 .menu button{
-background:#121212;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(8px);
 border:1px solid #7d2cff;
 color:white;
 padding:10px 15px;
@@ -106,7 +120,7 @@ font-weight:bold;
 }
 
 .menu button:hover{
-background:#7d2cff;
+background:rgba(125,44,255,0.4);
 }
 
 .menu button:last-child{
@@ -114,18 +128,9 @@ animation:blinkPromo 1s infinite;
 }
 
 @keyframes blinkPromo{
-0%{
-background:#121212;
-box-shadow:0 0 5px #7d2cff;
-}
-50%{
-background:#7d2cff;
-box-shadow:0 0 20px #c48bff, 0 0 30px #7d2cff;
-}
-100%{
-background:#121212;
-box-shadow:0 0 5px #7d2cff;
-}
+0%{box-shadow:0 0 5px #7d2cff;}
+50%{box-shadow:0 0 20px #c48bff, 0 0 30px #7d2cff;}
+100%{box-shadow:0 0 5px #7d2cff;}
 }
 
 .container{
@@ -140,11 +145,12 @@ display:grid;
 }
 
 .product{
-background:#121212;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
 border-radius:12px;
 padding:15px;
 text-align:center;
-box-shadow:0 0 12px rgba(0,0,0,0.7);
+box-shadow:0 0 20px rgba(0,0,0,0.6);
 }
 
 .product img{
@@ -170,7 +176,7 @@ margin-bottom:10px;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:6px;
-background:#0a0a0a;
+background:rgba(0,0,0,0.4);
 padding:10px;
 border-radius:10px;
 font-size:13px;
@@ -181,7 +187,7 @@ margin-bottom:10px;
 display:flex;
 justify-content:space-between;
 color:white;
-background:rgba(255,255,255,0.03);
+background:rgba(255,255,255,0.05);
 padding:5px 6px;
 border-radius:6px;
 }
@@ -192,13 +198,19 @@ font-weight:bold;
 }
 
 .button{
-background:linear-gradient(90deg,#c48bff,#7d2cff);
+background:rgba(196,139,255,0.2);
+backdrop-filter:blur(8px);
+border:1px solid #c48bff;
 color:white;
 padding:10px;
 border-radius:8px;
 text-decoration:none;
 display:inline-block;
 font-weight:bold;
+}
+
+.button:hover{
+background:#7d2cff;
 }
 
 #imgModal{
@@ -250,18 +262,15 @@ Clique sur la catégorie de ton choix
 <button onclick="showPage('packs')">🎁 PACKS PROMOS</button>
 </div>
 
+<!-- ===== FLEURS ===== -->
 <div id="fleurs" class="container active">
 
 <div class="product">
 <div class="title">US CALI 🇺🇸</div>
-
-<!-- ✅ IMAGE AJOUTÉE -->
 <img src="IMG_0716.jpeg" onclick="openModal(this.src)">
-
 <div style="font-size:13px;color:#aaa;margin-bottom:8px;">
 LEMON CHERRY GÊLATO 🍦🍋🍒
 </div>
-
 <div class="price">
 <div><p>1G</p><span>12€</span></div>
 <div><p>5G</p><span>50€</span></div>
@@ -276,14 +285,10 @@ LEMON CHERRY GÊLATO 🍦🍋🍒
 
 <div class="product">
 <div class="title">US CALI 🇺🇸</div>
-
-<!-- ✅ IMAGE AJOUTÉE -->
 <img src="IMG_0714.jpeg" onclick="openModal(this.src)">
-
 <div style="font-size:13px;color:#aaa;margin-bottom:8px;">
 SUNSET BERRY ☀️
 </div>
-
 <div class="price">
 <div><p>1G</p><span>12€</span></div>
 <div><p>5G</p><span>50€</span></div>
@@ -293,20 +298,15 @@ SUNSET BERRY ☀️
 <div><p>100G</p><span>550€</span></div>
 <div><p>1K</p><span>4800€</span></div>
 </div>
-
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 <div class="product">
 <div class="title">US CALI 🇺🇸</div>
-
-<!-- ✅ IMAGE AJOUTÉE -->
 <img src="IMG_0718.jpeg" onclick="openModal(this.src)">
-
 <div style="font-size:13px;color:#aaa;margin-bottom:8px;">
 COOKIES GARLIK TRUFLZ 🍪
 </div>
-
 <div class="price">
 <div><p>1G</p><span>12€</span></div>
 <div><p>5G</p><span>50€</span></div>
@@ -321,10 +321,7 @@ COOKIES GARLIK TRUFLZ 🍪
 
 <div class="product">
 <div class="title">NL CALI 🇳🇱</div>
-
-<!-- ✅ IMAGE AJOUTÉE ICI -->
 <img src="IMG_0712.jpeg" onclick="openModal(this.src)">
-
 <div style="font-size:13px;color:#aaa;margin-bottom:8px;">
 ICE CREAM 🍧
 </div>
@@ -342,10 +339,8 @@ ICE CREAM 🍧
 
 </div>
 
-<!-- ⚠️ TOUT LE RESTE EST IDENTIQUE -->
-
+<!-- ===== HASH ===== -->
 <div id="hash" class="container">
-
 <div class="product">
 <div class="title">DRY SIFT u45</div>
 <img src="IMG_0693.jpeg" onclick="openModal(this.src)">
@@ -376,9 +371,9 @@ ICE CREAM 🍧
 </div>
 <a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
-
 </div>
 
+<!-- ===== DURE ===== -->
 <div id="dure" class="container">
 
 <div class="product">
@@ -395,8 +390,6 @@ ICE CREAM 🍧
 
 <div class="product">
 <div class="title">K PAILLETTES 🦄</div>
-
-<!-- ✅ IMAGE REMPLACÉE -->
 <img src="IMG_0722.jpeg" onclick="openModal(this.src)">
 <div class="price">
 <div><p>1G</p><span>15€</span></div>
@@ -419,6 +412,7 @@ ICE CREAM 🍧
 
 </div>
 
+<!-- ===== PACKS ===== -->
 <div id="packs" class="container">
 
 <div class="product">
