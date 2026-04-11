@@ -54,8 +54,16 @@ animation:fadeGlow 2s infinite alternate;
 }
 
 @keyframes fadeGlow{
-0%{opacity:0.6;transform:translateY(0);text-shadow:0 0 5px #7d2cff;}
-100%{opacity:1;transform:translateY(-5px);text-shadow:0 0 20px #c48bff, 0 0 30px #7d2cff;}
+0%{
+opacity:0.6;
+transform:translateY(0);
+text-shadow:0 0 5px #7d2cff;
+}
+100%{
+opacity:1;
+transform:translateY(-5px);
+text-shadow:0 0 20px #c48bff, 0 0 30px #7d2cff;
+}
 }
 
 .category-hint{
@@ -106,9 +114,18 @@ animation:blinkPromo 1s infinite;
 }
 
 @keyframes blinkPromo{
-0%{background:#121212;box-shadow:0 0 5px #7d2cff;}
-50%{background:#7d2cff;box-shadow:0 0 20px #c48bff, 0 0 30px #7d2cff;}
-100%{background:#121212;box-shadow:0 0 5px #7d2cff;}
+0%{
+background:#121212;
+box-shadow:0 0 5px #7d2cff;
+}
+50%{
+background:#7d2cff;
+box-shadow:0 0 20px #c48bff, 0 0 30px #7d2cff;
+}
+100%{
+background:#121212;
+box-shadow:0 0 5px #7d2cff;
+}
 }
 
 .container{
@@ -128,6 +145,19 @@ border-radius:12px;
 padding:15px;
 text-align:center;
 box-shadow:0 0 12px rgba(0,0,0,0.7);
+}
+
+.product img{
+width:100px;
+border-radius:10px;
+margin-bottom:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.product img:hover{
+transform:scale(1.15);
+box-shadow:0 0 20px #7d2cff;
 }
 
 .title{
@@ -171,6 +201,25 @@ display:inline-block;
 font-weight:bold;
 }
 
+#imgModal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+#imgModal img{
+max-width:90%;
+max-height:90%;
+border-radius:12px;
+}
+
 </style>
 
 </head>
@@ -201,13 +250,12 @@ Clique sur la catégorie de ton choix
 <button onclick="showPage('packs')">🎁 PACKS PROMOS</button>
 </div>
 
-<!-- FLEURS -->
 <div id="fleurs" class="container active">
 
 <div class="product">
-<div class="title">US CALI 🇺🇸</div>
+<div class="title">US CALI</div>
 <div style="font-size:13px;color:#aaa;margin-bottom:8px;">
-SUNSET BERRY 🫐 🇺🇸
+SUNSET BERRY 🫐
 </div>
 <div class="price">
 <div><p>1G</p><span>10€</span></div>
@@ -218,57 +266,74 @@ SUNSET BERRY 🫐 🇺🇸
 <div><p>100G</p><span>520€</span></div>
 <div><p>1K</p><span>4500€</span></div>
 </div>
-<a class="button" href="#">Commander</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 <div class="product">
-<div class="title">US CALI 🇺🇸</div>
-<div style="font-size:13px;color:#aaa;margin-bottom:8px;">
-LEMON CHERRY GÊLATO
-</div>
+<div class="title">SHOP NL</div>
 <div class="price">
 <div><p>1G</p><span>10€</span></div>
 <div><p>5G</p><span>40€</span></div>
 <div><p>10G</p><span>80€</span></div>
+<div><p>25G</p><span>150€</span></div>
+<div><p>50G</p><span>280€</span></div>
+<div><p>100G</p><span>520€</span></div>
+<div><p>1K</p><span>4500€</span></div>
 </div>
-<a class="button" href="#">Commander</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 <div class="product">
-<div class="title">US CALI 🇺🇸</div>
-<div style="font-size:13px;color:#aaa;margin-bottom:8px;">
-COOKIES GARLIK TRUFLZ
-</div>
+<div class="title">C 3 🍁</div>
 <div class="price">
 <div><p>1G</p><span>10€</span></div>
 <div><p>5G</p><span>40€</span></div>
 <div><p>10G</p><span>80€</span></div>
+<div><p>25G</p><span>150€</span></div>
+<div><p>50G</p><span>280€</span></div>
+<div><p>100G</p><span>520€</span></div>
+<div><p>1K</p><span>4500€</span></div>
 </div>
-<a class="button" href="#">Commander</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 <div class="product">
-<div class="title">CALI NL</div>
-<div style="font-size:13px;color:#aaa;margin-bottom:8px;">
-ICE CREAM
-</div>
+<div class="title">C 4 🍁</div>
 <div class="price">
 <div><p>1G</p><span>10€</span></div>
 <div><p>5G</p><span>40€</span></div>
 <div><p>10G</p><span>80€</span></div>
+<div><p>25G</p><span>150€</span></div>
+<div><p>50G</p><span>280€</span></div>
+<div><p>100G</p><span>520€</span></div>
+<div><p>1K</p><span>4500€</span></div>
 </div>
-<a class="button" href="#">Commander</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
+</div>
+
+<div class="product">
+<div class="title">C 5 🍁</div>
+<div class="price">
+<div><p>1G</p><span>10€</span></div>
+<div><p>5G</p><span>40€</span></div>
+<div><p>10G</p><span>80€</span></div>
+<div><p>25G</p><span>150€</span></div>
+<div><p>50G</p><span>280€</span></div>
+<div><p>100G</p><span>520€</span></div>
+<div><p>1K</p><span>4500€</span></div>
+</div>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 </div>
 
-<!-- HASH -->
 <div id="hash" class="container">
 
 <div class="product">
 <div class="title">DRY SIFT u45</div>
-<img src="IMG_0693.jpeg">
+<img src="IMG_0693.jpeg" onclick="openModal(this.src)">
 <div class="price">
+<div><p>Biscotti Sherb Honey 🍯</p></div>
 <div><p>1G</p><span>10€</span></div>
 <div><p>5G</p><span>35€</span></div>
 <div><p>10G</p><span>70€</span></div>
@@ -277,12 +342,12 @@ ICE CREAM
 <div><p>100G</p><span>400€</span></div>
 <div><p>1K</p><span>3200€</span></div>
 </div>
-<a class="button" href="#">Commander</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 <div class="product">
 <div class="title">💎 Mousseux Premium</div>
-<img src="IMG_0670.jpeg">
+<img src="IMG_0670.jpeg" onclick="openModal(this.src)">
 <div class="price">
 <div><p>2,5G</p><span>10€</span></div>
 <div><p>5G</p><span>20€</span></div>
@@ -292,51 +357,49 @@ ICE CREAM
 <div><p>100G</p><span>240€</span></div>
 <div><p>1K</p><span>1850€</span></div>
 </div>
-<a class="button" href="#">Commander</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 </div>
 
-<!-- DURE -->
 <div id="dure" class="container">
 
 <div class="product">
 <div class="title">Z ❄️</div>
-<img src="IMG_0675.jpeg">
+<img src="IMG_0675.jpeg" onclick="openModal(this.src)">
 <div class="price">
 <div><p>0,5G</p><span>30€</span></div>
 <div><p>1G</p><span>50€</span></div>
 <div><p>5G</p><span>180€</span></div>
 <div><p>10G</p><span>300€</span></div>
 </div>
-<a class="button" href="#">Commander</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 <div class="product">
 <div class="title">K 🦄</div>
-<img src="IMG_0688.jpeg">
+<img src="IMG_0688.jpeg" onclick="openModal(this.src)">
 <div class="price">
 <div><p>1G</p><span>10€</span></div>
 <div><p>5G</p><span>40€</span></div>
 <div><p>10G</p><span>70€</span></div>
 </div>
-<a class="button" href="#">Commander</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 <div class="product">
 <div class="title">P 🍬</div>
-<img src="IMG_0689.jpeg">
+<img src="IMG_0689.jpeg" onclick="openModal(this.src)">
 <div class="price">
 <div><p>1P</p><span>5€</span></div>
 <div><p>5P</p><span>20€</span></div>
 <div><p>10P</p><span>35€</span></div>
 </div>
-<a class="button" href="#">Commander</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 </div>
 
-<!-- PACKS -->
 <div id="packs" class="container">
 
 <div class="product">
@@ -345,7 +408,7 @@ ICE CREAM
 <div><p>25G + 25G</p><span>230€</span></div>
 <div><p>50G + 50G</p><span>460€</span></div>
 </div>
-<a class="button" href="#">Commander</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
 <div class="product">
@@ -354,15 +417,28 @@ ICE CREAM
 <div><p>5G</p><span>25€</span></div>
 <div><p>10G</p><span>40€</span></div>
 </div>
-<a class="button" href="#">Commander</a>
+<a class="button" href="https://snapchat.com/add/nord_cali62">Commander</a>
 </div>
 
+</div>
+
+<div id="imgModal" onclick="closeModal()">
+<img id="modalImg">
 </div>
 
 <script>
 function showPage(page){
 document.querySelectorAll('.container').forEach(el => el.classList.remove('active'));
 document.getElementById(page).classList.add('active');
+}
+
+function openModal(src){
+document.getElementById("imgModal").style.display="flex";
+document.getElementById("modalImg").src=src;
+}
+
+function closeModal(){
+document.getElementById("imgModal").style.display="none";
 }
 </script>
 
