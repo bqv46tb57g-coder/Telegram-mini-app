@@ -10,14 +10,23 @@
 <style>
 
 body{
-background:url("IMG_0724.jpeg") no-repeat center center fixed;
-background-size:cover;
+background:url("IMG_0724.jpeg") no-repeat center center;
+background-size:contain;
+background-color:black;
 color:white;
 font-family:Arial;
 margin:0;
 }
 
-/* OVERLAY */
+/* MOBILE FIX /
+@media (max-width: 768px){
+body{
+background-size:contain;
+background-position:center top;
+}
+}
+
+/ OVERLAY FIX */
 body::before{
 content:"";
 position:fixed;
@@ -25,8 +34,13 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.75);
-z-index:-1;
+background:rgba(0,0,0,0.65);
+z-index:0;
+}
+
+body *{
+position:relative;
+z-index:1;
 }
 
 .header{
@@ -229,11 +243,9 @@ border-radius:12px;
 <body>
 
 <div class="header">
-
 <a class="snaplogo" href="https://snapchat.com/add/nord_cali62">
 👻 SNAP : nord_cali62
 </a>
-
 </div>
 
 <h2 class="welcome">Bienvenue 👋</h2>
